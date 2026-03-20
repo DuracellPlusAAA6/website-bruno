@@ -4,23 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Marques Silva</title>
+    <link rel="preload" as="image" href="P_20260316_174709.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <img src="P_20260316_174709.jpg" alt="Bruno Marques Silva" class="profile-photo">
-        <h1>Hi, I'm Bruno</h1>
+        <img src="P_20260316_174709.jpg" alt="Bruno Marques Silva" class="profile-photo" width="150" height="150" fetchpriority="high">
+        <h1>Hi, I'm Bruno Marques Silva</h1>
         <p class="title">EMEA Customer Support Engineer at Simbe Robotics</p>
         <p class="location">📍 France</p>
         <div class="about">
-            <p>I help international retail clients deploy and get the most out of Simbe's AI-powered robotic solutions. My work spans on-site troubleshooting, customer onboarding, and building tools that make support faster and smarter. Day-to-day, I work closely with computer vision pipelines and AI-driven analytics — inspecting model outputs, validating detections, and diagnosing issues across the full robotics stack. I also manage and debug API integrations and data flows between Simbe's platform and retailer systems, turning raw telemetry and structured data into actionable insights. I bridge the gap between customers and engineering teams — translating complex technical issues into clear solutions and real business value.</p>
-            <a href="https://simberobotics.com" class="company-link" target="_blank">simberobotics.com</a>
-            <p class="languages">🗣 English · Portuguese · Spanish</p>
+            <ul class="description" id="description">
+                <li
+                    data-en="I help international retail clients deploy and get the most out of Simbe's AI-powered robotic solutions."
+                    data-pt="Ajudo clientes internacionais de retalho a implementar e tirar o máximo partido das soluções robóticas com IA da Simbe."
+                    data-es="Ayudo a clientes internacionales del sector retail a desplegar y sacar el máximo partido a las soluciones robóticas impulsadas por IA de Simbe."
+                >I help international retail clients deploy and get the most out of Simbe's AI-powered robotic solutions.</li>
+                <li
+                    data-en="On-site troubleshooting, customer onboarding, and building tools that make support faster and smarter."
+                    data-pt="Suporte técnico no local, integração de clientes e desenvolvimento de ferramentas que tornam o suporte mais rápido e eficiente."
+                    data-es="Soporte técnico in situ, incorporación de clientes y desarrollo de herramientas que hacen el soporte más rápido y eficiente."
+                >On-site troubleshooting, customer onboarding, and building tools that make support faster and smarter.</li>
+                <li
+                    data-en="I work closely with computer vision pipelines and AI-driven analytics — inspecting model outputs, validating detections, and diagnosing issues across the full robotics stack."
+                    data-pt="Trabalho com pipelines de visão por computador e análise com IA — inspecionando outputs de modelos, validando deteções e diagnosticando problemas em toda a stack robótica."
+                    data-es="Trabajo con pipelines de visión por computadora e IA — inspeccionando salidas de modelos, validando detecciones y diagnosticando problemas en todo el stack robótico."
+                >I work closely with computer vision pipelines and AI-driven analytics — inspecting model outputs, validating detections, and diagnosing issues across the full robotics stack.</li>
+                <li
+                    data-en="I manage and debug API integrations and data flows between Simbe's platform and retailer systems, turning raw telemetry and structured data into actionable insights."
+                    data-pt="Giro e depuro integrações de API e fluxos de dados entre a plataforma da Simbe e os sistemas dos retalhistas, transformando telemetria bruta e dados estruturados em insights acionáveis."
+                    data-es="Gestiono e depuro integraciones de API y flujos de datos entre la plataforma de Simbe y los sistemas de los retailers, convirtiendo telemetría bruta y datos estructurados en insights accionables."
+                >I manage and debug API integrations and data flows between Simbe's platform and retailer systems, turning raw telemetry and structured data into actionable insights.</li>
+                <li
+                    data-en="I bridge the gap between customers and engineering teams — translating complex technical issues into clear solutions and real business value."
+                    data-pt="Faço a ponte entre clientes e equipas de engenharia — traduzindo problemas técnicos complexos em soluções claras e valor real para o negócio."
+                    data-es="Sirvo de puente entre clientes y equipos de ingeniería — traduciendo problemas técnicos complejos en soluciones claras y valor real para el negocio."
+                >I bridge the gap between customers and engineering teams — translating complex technical issues into clear solutions and real business value.</li>
+            </ul>
+            <p class="simbe-link">Find out more about Simbe at: <a href="https://simberobotics.com" class="company-link" target="_blank">simberobotics.com</a></p>
+            <p class="languages">
+                🗣
+                <span class="lang-btn active" data-lang="en">English</span> ·
+                <span class="lang-btn" data-lang="pt">Portuguese</span> ·
+                <span class="lang-btn" data-lang="es">Spanish</span>
+            </p>
         </div>
         <div class="links">
             <a href="mailto:bruno@marquessilva.eu" class="email-link">bruno@marquessilva.eu</a>
             <a href="https://www.linkedin.com/in/bmmsilva" class="linkedin-link" target="_blank">LinkedIn</a>
+            <button class="phone-btn" id="phone-btn">📞 Phone</button>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const lang = btn.dataset.lang;
+                document.querySelectorAll('#description li').forEach(li => {
+                    li.textContent = li.dataset[lang];
+                });
+            });
+        });
+
+        document.getElementById('phone-btn').addEventListener('click', function () {
+            this.textContent = "I don't give phone numbers to random people on the internet :) email me";
+        });
+    </script>
 </body>
 </html>

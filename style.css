@@ -68,12 +68,27 @@ p {
     line-height: 1.6;
 }
 
-.about .company-link {
-    display: inline-block;
+.description {
+    margin: 0 0 0.75rem 1.25rem;
+    padding: 0;
+}
+
+.description li {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+}
+
+.simbe-link {
     font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.about .company-link {
     color: #3498db;
     text-decoration: none;
-    margin-bottom: 0.6rem;
 }
 
 .about .company-link:hover {
@@ -84,6 +99,37 @@ p {
     font-size: 0.95rem;
     color: #777;
     margin-bottom: 0;
+}
+
+.lang-btn {
+    cursor: pointer;
+    color: #777;
+    transition: color 0.2s ease;
+}
+
+.lang-btn:hover {
+    color: #3498db;
+}
+
+.lang-btn.active {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.phone-btn {
+    background: none;
+    border: 1px solid #3498db;
+    color: #3498db;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.phone-btn:hover {
+    background: #3498db;
+    color: white;
 }
 
 .links {
