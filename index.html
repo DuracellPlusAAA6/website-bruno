@@ -12,19 +12,34 @@
         <img src="P_20260316_174709.jpg" alt="Bruno Marques Silva" class="profile-photo" width="150" height="150" fetchpriority="high">
         <h1>Hi, I'm Bruno Marques Silva</h1>
         <p class="title">EMEA Customer Support Engineer at Simbe Robotics
-            <svg class="tally-icon" width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <!-- Antenna -->
-                <line x1="16" y1="1" x2="16" y2="5" stroke="#2c3e50" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="16" cy="1" r="1.5" fill="#3498db"/>
-                <!-- Head -->
-                <rect x="10" y="5" width="12" height="9" rx="2" fill="#2c3e50"/>
-                <!-- Scanner display -->
-                <rect x="11.5" y="7" width="9" height="5" rx="1" fill="#3498db" opacity="0.85"/>
-                <!-- Body -->
-                <rect x="9" y="15" width="14" height="11" rx="2.5" fill="#2c3e50"/>
-                <!-- Wheels -->
-                <rect x="9" y="26" width="5" height="3" rx="1.5" fill="#555"/>
-                <rect x="18" y="26" width="5" height="3" rx="1.5" fill="#555"/>
+            <svg class="tally-eyes" viewBox="0 0 200 108" width="96" height="52" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="sec-l"><circle cx="52" cy="54" r="40"/></clipPath>
+                    <clipPath id="sec-r"><circle cx="148" cy="54" r="40"/></clipPath>
+                    <style>
+                        .se-iris {
+                            animation: se-gaze 5s ease-in-out infinite;
+                            transform-box: fill-box;
+                            transform-origin: center;
+                        }
+                        @keyframes se-gaze {
+                            0%   { transform: translate(0px,   0px); }
+                            15%  { transform: translate(12px, -8px); }
+                            30%  { transform: translate(-10px,  6px); }
+                            50%  { transform: translate(10px,   8px); }
+                            70%  { transform: translate(-12px, -6px); }
+                            85%  { transform: translate(8px,  -10px); }
+                            100% { transform: translate(0px,   0px); }
+                        }
+                    </style>
+                </defs>
+                <rect width="200" height="108" fill="#6fcacf" rx="10"/>
+                <g clip-path="url(#sec-l)">
+                    <circle class="se-iris" cx="52" cy="54" r="26" fill="#1b2c2c"/>
+                </g>
+                <g clip-path="url(#sec-r)">
+                    <circle class="se-iris" cx="148" cy="54" r="26" fill="#1b2c2c"/>
+                </g>
             </svg>
         </p>
         <p class="location">
