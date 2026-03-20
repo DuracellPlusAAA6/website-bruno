@@ -68,6 +68,18 @@ p {
     line-height: 1.6;
 }
 
+.about .company-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+}
+
+.about .company-link:hover {
+    text-decoration: underline;
+}
+
 .about .languages {
     font-size: 0.95rem;
     color: #777;
