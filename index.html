@@ -227,6 +227,7 @@
                 this.classList.add('btn-used');
                 pendingContact = 'email';
                 resetCaptcha();
+                this.insertAdjacentElement('afterend', document.getElementById('captcha-gate'));
                 document.getElementById('captcha-gate').classList.remove('hidden');
             }
         });
@@ -236,6 +237,7 @@
                 this.classList.add('btn-used');
                 pendingContact = 'chat';
                 resetCaptcha();
+                this.insertAdjacentElement('afterend', document.getElementById('captcha-gate'));
                 document.getElementById('captcha-gate').classList.remove('hidden');
             }
         });
