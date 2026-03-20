@@ -52,6 +52,28 @@ p {
     margin-bottom: 1.5rem;
 }
 
+.about {
+    background-color: #f0f4f8;
+    border-left: 4px solid #3498db;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.about .languages {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
 .links {
     display: flex;
     flex-direction: column;
