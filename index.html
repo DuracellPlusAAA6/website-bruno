@@ -224,7 +224,7 @@
 
         document.getElementById('email-trigger-btn').addEventListener('click', function () {
             if (document.getElementById('email-contact').classList.contains('hidden')) {
-                this.classList.add('hidden');
+                this.classList.add('btn-used');
                 pendingContact = 'email';
                 resetCaptcha();
                 document.getElementById('captcha-gate').classList.remove('hidden');
@@ -233,7 +233,7 @@
 
         document.getElementById('chat-trigger-btn').addEventListener('click', function () {
             if (document.getElementById('chat-contact').classList.contains('hidden')) {
-                this.classList.add('hidden');
+                this.classList.add('btn-used');
                 pendingContact = 'chat';
                 resetCaptcha();
                 document.getElementById('captcha-gate').classList.remove('hidden');

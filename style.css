@@ -203,6 +203,10 @@ p {
     flex-shrink: 0;
 }
 
+.email-trigger-btn.btn-used {
+    visibility: hidden;
+}
+
 /* LinkedIn colour overrides */
 .linkedin-btn {
     border-color: #0077B5;
