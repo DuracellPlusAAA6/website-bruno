@@ -125,7 +125,9 @@
                         <path d="M7 9l5 4 5-4" stroke="#6D4AFF" stroke-width="1.5" stroke-linecap="round" fill="none"/>
                     </svg>
                     <a href="mailto:bruno@marquessilva.eu" class="email-link">bruno@marquessilva.eu</a>
-                    <button class="copy-btn" id="copy-btn" title="Copy email">⧉</button>
+                    <button class="copy-btn" id="copy-btn" title="Copy email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    </button>
                 </div>
                 <div class="signal-row">
                     <a href="https://signal.me/#eu/brunosilva.25" class="signal-link" target="_blank" rel="noopener">
@@ -136,7 +138,9 @@
                         </svg>
                         @brunosilva.25
                     </a>
-                    <button class="copy-btn" id="copy-signal-btn" title="Copy Signal handle">⧉</button>
+                    <button class="copy-btn" id="copy-signal-btn" title="Copy Signal handle">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    </button>
                 </div>
             </div>
 
@@ -191,12 +195,14 @@
             }, 800);
         });
 
+        const copyIconSVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
+
         document.getElementById('copy-signal-btn').addEventListener('click', function () {
             navigator.clipboard.writeText('@brunosilva.25').then(() => {
                 this.textContent = '✓';
                 this.classList.add('copied');
                 setTimeout(() => {
-                    this.textContent = '⧉';
+                    this.innerHTML = copyIconSVG;
                     this.classList.remove('copied');
                 }, 1500);
             });
@@ -207,7 +213,7 @@
                 this.textContent = '✓';
                 this.classList.add('copied');
                 setTimeout(() => {
-                    this.textContent = '⧉';
+                    this.innerHTML = copyIconSVG;
                     this.classList.remove('copied');
                 }, 1500);
             });

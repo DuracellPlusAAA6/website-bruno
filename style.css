@@ -331,12 +331,15 @@ p {
     background: none;
     border: none;
     color: #aaa;
-    font-size: 1rem;
+    font-size: 0.85rem;
     cursor: pointer;
-    padding: 0.1rem 0.3rem;
+    padding: 0.2rem 0.3rem;
     border-radius: 4px;
     transition: color 0.2s ease, background 0.2s ease;
     line-height: 1;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .copy-btn:hover {
