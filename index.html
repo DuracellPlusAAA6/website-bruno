@@ -42,6 +42,14 @@
                 >I bridge the gap between customers and engineering teams — translating complex technical issues into clear solutions and real business value.</li>
             </ul>
             <p class="simbe-link">Find out more about Simbe at: <a href="https://simberobotics.com" class="company-link" target="_blank">simberobotics.com</a></p>
+        </div>
+        <div class="about">
+            <p class="tally-intro" id="tally-intro"
+                data-en="I also deploy Tally across Europe — helping businesses streamline data collection with flexible, no-code forms."
+                data-pt="Também faço a implementação do Tally na Europa — ajudando empresas a simplificar a recolha de dados com formulários flexíveis e sem código."
+                data-es="También despliego Tally en Europa — ayudando a empresas a optimizar la recopilación de datos con formularios flexibles y sin código."
+            >I also deploy Tally across Europe — helping businesses streamline data collection with flexible, no-code forms.</p>
+            <p class="simbe-link">Find out more about Tally at: <a href="https://tally.so" class="company-link" target="_blank">tally.so</a></p>
             <p class="languages">
                 🗣
                 <span class="lang-btn active" data-lang="en">English</span> ·
@@ -64,6 +72,8 @@
                 document.querySelectorAll('#description li').forEach(li => {
                     li.textContent = li.dataset[lang];
                 });
+                const tally = document.getElementById('tally-intro');
+                if (tally) tally.textContent = tally.dataset[lang];
             });
         });
 
