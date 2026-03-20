@@ -348,6 +348,13 @@ p {
     color: #27ae60;
 }
 
+/* Signal row */
+.signal-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 /* Signal link */
 .signal-link {
     display: flex;
