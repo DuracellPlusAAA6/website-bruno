@@ -175,10 +175,11 @@ p {
     display: none !important;
 }
 
-/* Email trigger button */
+/* Email trigger button — shared style for all 4 action buttons */
 .email-trigger-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: none;
     border: 1px solid #3498db;
@@ -187,6 +188,9 @@ p {
     padding: 0.45rem 1.2rem;
     border-radius: 6px;
     cursor: pointer;
+    text-decoration: none;
+    width: 150px;
+    box-sizing: border-box;
     transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -197,6 +201,17 @@ p {
 
 .email-trigger-btn svg {
     flex-shrink: 0;
+}
+
+/* LinkedIn colour overrides */
+.linkedin-btn {
+    border-color: #0077B5;
+    color: #0077B5;
+}
+
+.linkedin-btn:hover {
+    background: #0077B5;
+    color: white;
 }
 
 /* reCAPTCHA gate */
@@ -374,38 +389,6 @@ p {
     text-decoration: underline;
 }
 
-/* Phone button */
-.phone-btn {
-    background: none;
-    border: 1px solid #3498db;
-    color: #3498db;
-    font-size: 1.1rem;
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.phone-btn:hover {
-    background: #3498db;
-    color: white;
-}
-
-/* LinkedIn link */
-.linkedin-link {
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
-    color: #0077B5;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.2s ease;
-}
-
-.linkedin-link:hover {
-    color: #005885;
-    text-decoration: underline;
-}
 
 /* Inline icons */
 .tally-eyes {
