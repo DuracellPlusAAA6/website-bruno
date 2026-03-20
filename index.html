@@ -256,11 +256,16 @@
             setTimeout(() => {
                 visual.classList.remove('checking');
                 visual.classList.add('checked');
-                document.getElementById('captcha-gate').classList.add('hidden');
+                const gate = document.getElementById('captcha-gate');
+                gate.classList.add('hidden');
                 if (pendingContact === 'email') {
-                    document.getElementById('email-contact').classList.remove('hidden');
+                    const el = document.getElementById('email-contact');
+                    gate.insertAdjacentElement('afterend', el);
+                    el.classList.remove('hidden');
                 } else if (pendingContact === 'chat') {
-                    document.getElementById('chat-contact').classList.remove('hidden');
+                    const el = document.getElementById('chat-contact');
+                    gate.insertAdjacentElement('afterend', el);
+                    el.classList.remove('hidden');
                 }
                 pendingContact = null;
             }, 800);
