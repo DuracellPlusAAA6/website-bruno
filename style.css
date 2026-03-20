@@ -65,6 +65,7 @@ p {
     height: 12px;
 }
 
+/* Boxes */
 .about {
     background-color: #f0f4f8;
     border-left: 4px solid #3498db;
@@ -117,30 +118,38 @@ p {
     text-decoration: underline;
 }
 
-/* Languages box */
+/* Language box */
 .languages-box {
     padding: 0.75rem 1.25rem;
 }
 
-.about .languages {
-    font-size: 0.95rem;
-    color: #777;
-    margin-bottom: 0;
+.lang-pills {
+    display: flex;
+    gap: 0.5rem;
 }
 
 .lang-btn {
     cursor: pointer;
-    color: #777;
-    transition: color 0.2s ease;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #888;
+    background: white;
+    border: 1.5px solid #d0d8e4;
+    border-radius: 20px;
+    padding: 0.25rem 0.8rem;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    user-select: none;
 }
 
 .lang-btn:hover {
     color: #3498db;
+    border-color: #3498db;
 }
 
 .lang-btn.active {
-    color: #3498db;
-    font-weight: bold;
+    color: white;
+    background: #3498db;
+    border-color: #3498db;
 }
 
 /* Links section */
@@ -149,6 +158,34 @@ p {
     flex-direction: column;
     gap: 0.75rem;
     align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Email trigger button */
+.email-trigger-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: 1px solid #3498db;
+    color: #3498db;
+    font-size: 1.1rem;
+    padding: 0.45rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.email-trigger-btn:hover {
+    background: #3498db;
+    color: white;
+}
+
+.email-trigger-btn svg {
+    flex-shrink: 0;
 }
 
 /* reCAPTCHA gate */
@@ -190,6 +227,7 @@ p {
     justify-content: center;
     transition: border-color 0.2s ease;
     position: relative;
+    overflow: hidden;
 }
 
 .captcha-checkbox:hover {
@@ -252,16 +290,12 @@ p {
     color: #bbb;
 }
 
-/* Contact row (revealed after captcha) */
+/* Contact row */
 .contact-row {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-}
-
-.contact-row.hidden {
-    display: none;
 }
 
 .email-row {
@@ -270,14 +304,14 @@ p {
     gap: 0.5rem;
 }
 
-.email-link, .linkedin-link {
+.email-link {
     color: #3498db;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
-.email-link:hover, .linkedin-link:hover {
+.email-link:hover {
     color: #2980b9;
     text-decoration: underline;
 }
@@ -319,10 +353,7 @@ p {
     text-decoration: underline;
 }
 
-.signal-icon {
-    flex-shrink: 0;
-}
-
+/* Phone button */
 .phone-btn {
     background: none;
     border: 1px solid #3498db;
@@ -337,6 +368,22 @@ p {
 .phone-btn:hover {
     background: #3498db;
     color: white;
+}
+
+/* LinkedIn link */
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #0077B5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.linkedin-link:hover {
+    color: #005885;
+    text-decoration: underline;
 }
 
 /* Footer year */
