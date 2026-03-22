@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="8" fill="#6fcacf"/>
+  <!-- Antenna -->
+  <line x1="16" y1="2" x2="16" y2="6" stroke="#1b2c2c" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="16" cy="2" r="1.5" fill="#1b2c2c"/>
+  <!-- Head -->
+  <rect x="9" y="6" width="14" height="10" rx="2.5" fill="#1b2c2c"/>
+  <!-- Scanner display -->
+  <rect x="10.5" y="8" width="11" height="6" rx="1.5" fill="#6fcacf" opacity="0.9"/>
+  <!-- Eyes on scanner -->
+  <circle cx="13.5" cy="11" r="1.5" fill="#1b2c2c"/>
+  <circle cx="18.5" cy="11" r="1.5" fill="#1b2c2c"/>
+  <!-- Body -->
+  <rect x="8" y="17" width="16" height="10" rx="2.5" fill="#1b2c2c"/>
+  <!-- Wheels -->
+  <rect x="8" y="27" width="6" height="3" rx="1.5" fill="#1b2c2c"/>
+  <rect x="18" y="27" width="6" height="3" rx="1.5" fill="#1b2c2c"/>
+</svg>
