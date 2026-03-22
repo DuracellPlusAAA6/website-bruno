@@ -330,20 +330,23 @@ p {
     gap: 0.5rem;
 }
 
-.email-row {
+.revealed-row {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.email-link {
+.revealed-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     color: #3498db;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    transition: color 0.2s ease;
 }
 
-.email-link:hover {
+.revealed-link:hover {
     color: #2980b9;
     text-decoration: underline;
 }
@@ -372,28 +375,6 @@ p {
     color: #27ae60;
 }
 
-/* Signal row */
-.signal-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* Signal link */
-.signal-link {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: #3A76F0;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.2s ease;
-}
-
-.signal-link:hover {
-    color: #2558c8;
-    text-decoration: underline;
-}
 
 
 /* Inline icons */
@@ -403,9 +384,6 @@ p {
     border-radius: 6px;
 }
 
-.proton-icon {
-    flex-shrink: 0;
-}
 
 /* Footer year */
 .footer-year {
