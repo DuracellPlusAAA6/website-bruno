@@ -218,8 +218,70 @@
 
         document.getElementById('phone-btn').addEventListener('click', function () {
             this.textContent = "I don't give phone numbers to random people on the internet :)";
+        });
 
- main
+        let pendingContact = null;
+
+        document.getElementById('email-trigger-btn').addEventListener('click', function () {
+            if (document.getElementById('email-contact').classList.contains('hidden')) {
+                this.classList.add('btn-used');
+                pendingContact = 'email';
+                resetCaptcha();
+                this.insertAdjacentElement('afterend', document.getElementById('captcha-gate'));
+                document.getElementById('captcha-gate').classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('chat-trigger-btn').addEventListener('click', function () {
+            if (document.getElementById('chat-contact').classList.contains('hidden')) {
+                this.classList.add('btn-used');
+                pendingContact = 'chat';
+                resetCaptcha();
+                this.insertAdjacentElement('afterend', document.getElementById('captcha-gate'));
+                document.getElementById('captcha-gate').classList.remove('hidden');
+            }
+        });
+
+        function resetCaptcha() {
+            const check = document.getElementById('captcha-check');
+            const visual = document.getElementById('captcha-visual');
+            check.checked = false;
+            visual.classList.remove('checking', 'checked');
+        }
+
+        document.getElementById('captcha-check').addEventListener('change', function () {
+            if (!this.checked) return;
+            const visual = document.getElementById('captcha-visual');
+            visual.classList.add('checking');
+            setTimeout(() => {
+                visual.classList.remove('checking');
+                visual.classList.add('checked');
+                const gate = document.getElementById('captcha-gate');
+                gate.classList.add('hidden');
+                if (pendingContact === 'email') {
+                    const el = document.getElementById('email-contact');
+                    gate.insertAdjacentElement('afterend', el);
+                    el.classList.remove('hidden');
+                } else if (pendingContact === 'chat') {
+                    const el = document.getElementById('chat-contact');
+                    gate.insertAdjacentElement('afterend', el);
+                    el.classList.remove('hidden');
+                }
+                pendingContact = null;
+            }, 800);
+        });
+
+        const copyIconSVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
+
+        document.getElementById('copy-signal-btn').addEventListener('click', function () {
+            navigator.clipboard.writeText('@brunosilva.25').then(() => {
+                this.textContent = '✓';
+                this.classList.add('copied');
+                setTimeout(() => {
+                    this.innerHTML = copyIconSVG;
+                    this.classList.remove('copied');
+                }, 1500);
+            });
         });
 
         document.getElementById('copy-btn').addEventListener('click', function () {
