@@ -1,26 +1,31 @@
-# Project Documentation
+# marquessilva.eu
 
-## Purpose
-The purpose of this project is to provide an intuitive and user-friendly website for users to explore and manage various functionalities related to our services.  
+Personal website for **Bruno Marques Silva** — EMEA Customer Support Engineer at [Simbe Robotics](https://simberobotics.com).
 
-## Customization
-You can customize the website by modifying the following files:
-- `index.html`: The main landing page.
-- `styles.css`: The styles used throughout the website.
-- `script.js`: The JavaScript functionalities.
+Live at: **https://marquessilva.eu**
 
-To make changes, simply edit the relevant files and commit your changes.
+## What it is
 
-## Deployment Instructions
-To deploy the website:
-1. Clone the repository to your local machine:
-   ```
-   git clone https://github.com/DuracellPlusAAA6/website-bruno.git
-   ```  
-2. Navigate to the project directory:
-   ```
-   cd website-bruno
-   ```  
-3. Open `index.html` in your web browser to see the website.
+A single-page profile site introducing Bruno and his work. It covers:
 
-For production deployment, consider using services such as GitHub Pages, Netlify, or Vercel to host your website online.
+- What Simbe Robotics does (AI-powered inventory robots)
+- Bruno's role: supporting international retail clients deploying Simbe's Tally robot across EMEA
+- Contact links (email, Signal, LinkedIn) — email and Signal are gated behind a fake reCAPTCHA to reduce bot scraping
+- Language switcher (English / Portuguese / Spanish)
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| `index.html` | The whole site — structure, content, and JS |
+| `style.css` | All styles |
+| `photo.jpg` | Profile photo |
+| `favicon.svg` | Browser tab icon |
+| `robots.txt` | Search engine crawl rules |
+| `sitemap.xml` | Sitemap for SEO |
+| `googlefc1a783afde469c7.html` | Google Search Console ownership verification |
+| `.github/workflows/jekyll-gh-pages.yml` | GitHub Pages deployment workflow |
+
+## Deployment
+
+Hosted on **GitHub Pages**. Pushes to `main` trigger automatic deployment via the workflow in `.github/workflows/`.
