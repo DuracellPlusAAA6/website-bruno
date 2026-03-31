@@ -1,15 +1,75 @@
+/* Theme variables */
+:root {
+    --bg-page: #f4f4f9;
+    --bg-card: #ffffff;
+    --bg-box: #f0f4f8;
+    --bg-captcha: #f9f9f9;
+    --bg-lang-btn: #ffffff;
+    --color-text: #333;
+    --color-heading: #2c3e50;
+    --color-subtitle: #555;
+    --color-muted: #777;
+    --color-body: #444;
+    --color-footer: #bbb;
+    --color-border: #d0d8e4;
+    --color-captcha-border: #d3d3d3;
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+    --bg-page: #1a1a2e;
+    --bg-card: #16213e;
+    --bg-box: #0f3460;
+    --bg-captcha: #1e2a4a;
+    --bg-lang-btn: #16213e;
+    --color-text: #e0e0e0;
+    --color-heading: #e0e0e0;
+    --color-subtitle: #aaa;
+    --color-muted: #888;
+    --color-body: #ccc;
+    --color-footer: #666;
+    --color-border: #334;
+    --color-captcha-border: #334;
+    --shadow-card: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--bg-card);
+    border: 1.5px solid var(--color-border);
+    border-radius: 20px;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    z-index: 100;
+}
+
+.theme-toggle:hover {
+    color: #3498db;
+    border-color: #3498db;
+}
+
 /* Reset and base styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 2rem 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--bg-page);
+    color: var(--color-text);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -17,9 +77,10 @@ body {
     max-width: 600px;
     width: 100%;
     padding: 2rem;
-    background: white;
+    background: var(--bg-card);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-card);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-photo {
@@ -34,7 +95,7 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: var(--color-heading);
 }
 
 p {
@@ -44,13 +105,13 @@ p {
 
 .title {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--color-subtitle);
     margin-bottom: 0.5rem;
 }
 
 .location {
     font-size: 1rem;
-    color: #777;
+    color: var(--color-muted);
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
@@ -67,12 +128,13 @@ p {
 
 /* Boxes */
 .about {
-    background-color: #f0f4f8;
+    background-color: var(--bg-box);
     border-left: 4px solid #3498db;
     border-radius: 6px;
     padding: 1rem 1.25rem;
     margin-bottom: 1.5rem;
     text-align: left;
+    transition: background-color 0.3s ease;
 }
 
 .box-title {
@@ -86,7 +148,7 @@ p {
 
 .about p {
     font-size: 1rem;
-    color: #444;
+    color: var(--color-body);
     margin-bottom: 0.5rem;
     line-height: 1.6;
 }
@@ -98,14 +160,14 @@ p {
 
 .description li {
     font-size: 1rem;
-    color: #444;
+    color: var(--color-body);
     line-height: 1.6;
     margin-bottom: 0.4rem;
 }
 
 .simbe-link {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--color-muted);
     margin-bottom: 0.5rem;
 }
 
@@ -144,8 +206,8 @@ p {
     font-size: 0.85rem;
     font-weight: 600;
     color: #888;
-    background: white;
-    border: 1.5px solid #d0d8e4;
+    background: var(--bg-lang-btn);
+    border: 1.5px solid var(--color-border);
     border-radius: 20px;
     padding: 0.25rem 0.8rem;
     transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -222,12 +284,13 @@ p {
 
 /* reCAPTCHA gate */
 .captcha-gate {
-    border: 1px solid #d3d3d3;
+    border: 1px solid var(--color-captcha-border);
     border-radius: 4px;
-    background: #f9f9f9;
+    background: var(--bg-captcha);
     padding: 0.75rem 1rem;
     width: 300px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
 }
 
 .captcha-gate.verified {
@@ -299,7 +362,7 @@ p {
 
 .captcha-label {
     font-size: 0.95rem;
-    color: #333;
+    color: var(--color-text);
     flex: 1;
 }
 
@@ -390,7 +453,7 @@ p {
 /* Footer year */
 .footer-year {
     font-size: 0.8rem;
-    color: #bbb;
+    color: var(--color-footer);
     margin-top: 1.5rem;
     margin-bottom: 0;
 }
